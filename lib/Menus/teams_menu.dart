@@ -3,6 +3,7 @@ import 'package:get/get.dart';
 import 'package:pas1_mobile_11pplg1_12/Controllers/teamData_controller.dart';
 import 'package:pas1_mobile_11pplg1_12/Models/Team_model.dart';
 import 'package:pas1_mobile_11pplg1_12/Widget/mycard.dart';
+import 'package:pas1_mobile_11pplg1_12/Widget/mycolors.dart';
 
 class TeamsMenu extends StatelessWidget {
   final TeamdataController controller = Get.put(TeamdataController());
@@ -12,10 +13,14 @@ class TeamsMenu extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
           title: Text(
-            'English Teams',
+            'English teams',
+            style: TextStyle(
+              fontWeight: FontWeight.bold,
+              color: colortextW),
           ),
           automaticallyImplyLeading: false,
           centerTitle: true,
+          backgroundColor: colorheader,
         ),
       body: Obx(() {
         if (controller.isLoading.value) {

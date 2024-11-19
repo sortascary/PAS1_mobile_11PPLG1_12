@@ -3,6 +3,7 @@ import 'package:get/get.dart';
 import 'package:pas1_mobile_11pplg1_12/Controllers/task_controller.dart';
 import 'package:pas1_mobile_11pplg1_12/Controllers/teamData_controller.dart';
 import 'package:pas1_mobile_11pplg1_12/Widget/mycard.dart';
+import 'package:pas1_mobile_11pplg1_12/Widget/mycolors.dart';
 
 class FavouriteMenu extends StatelessWidget {
   final TaskController taskController = Get.put(TaskController());
@@ -14,8 +15,16 @@ class FavouriteMenu extends StatelessWidget {
 
     return Scaffold(
       appBar: AppBar(
-        title: Text('Favourites'),
-      ),
+          title: Text(
+            'Favorites',
+            style: TextStyle(
+              fontWeight: FontWeight.bold,
+              color: colortextW),
+          ),
+          automaticallyImplyLeading: false,
+          centerTitle: true,
+          backgroundColor: colorheader,
+        ),
       body: Column(
         children: [
           Expanded(

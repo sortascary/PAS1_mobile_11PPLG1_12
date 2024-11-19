@@ -5,6 +5,7 @@ import 'package:pas1_mobile_11pplg1_12/Controllers/login_controller.dart';
 import 'package:pas1_mobile_11pplg1_12/Models/Login_models.dart';
 import 'package:pas1_mobile_11pplg1_12/Pages/Register_page.dart';
 import 'package:pas1_mobile_11pplg1_12/Widget/mybutton.dart';
+import 'package:pas1_mobile_11pplg1_12/Widget/mycolors.dart';
 import 'package:pas1_mobile_11pplg1_12/Widget/mytextfield.dart';
 
 class LoginPage extends StatelessWidget {
@@ -15,14 +16,15 @@ class LoginPage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('Hey welcome back!'),
-        titleTextStyle: TextStyle(
-          fontWeight: FontWeight.bold, // Makes the text bold
-          fontSize: 30, // Optional: Adjust font size
-          color: Colors.black, // Optional: Set text color
+          title: Text(
+            'Hey welcome back!',
+            style: TextStyle(
+              fontWeight: FontWeight.bold,
+              color: colortextW),
+          ),
+          automaticallyImplyLeading: false,
+          backgroundColor: colorheader,
         ),
-        automaticallyImplyLeading: false,
-      ),
       body: Padding(
         padding: EdgeInsets.all(16.0),
         child: Column(
