@@ -3,6 +3,7 @@ class FavoriteModel {
   int num;
   String title;
   String image;
+  final String Desc;
   String website;
   String facebook;
   String twitter;
@@ -13,6 +14,7 @@ class FavoriteModel {
     required this.num,
     required this.title,
     required this.image,
+    required this.Desc,
     required this.website,
     required this.facebook,
     required this.twitter,
@@ -26,6 +28,7 @@ class FavoriteModel {
       'num':num,
       'title': title,
       'image': image,
+      'Desc': Desc,
       'website': website,
       'facebook': facebook,
       'twitter': twitter,
@@ -44,6 +47,7 @@ class FavoriteModel {
       facebook: map['facebook'],
       twitter: map['twitter'],
       liked: map['liked'],
+      Desc: map['Desc'],
     );
   }
 }

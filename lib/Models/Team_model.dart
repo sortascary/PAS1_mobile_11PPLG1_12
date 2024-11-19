@@ -1,6 +1,7 @@
 class TeamModel{
   final int? id;
   final String image;
+  final String Desc;
   final String teamName;
   final String facebook;
   final String website;
@@ -10,6 +11,7 @@ class TeamModel{
   TeamModel({
     required this.id,
     required this.image,
+    required this.Desc,
     required this.teamName,
     required this.facebook,
     required this.website,
@@ -21,6 +23,7 @@ class TeamModel{
     return {
       'id': id,
       'image': image,
+      'Desc': Desc,
       'teamName': teamName,
       'facebook': facebook,
       'website': website,
@@ -37,7 +40,8 @@ class TeamModel{
       facebook: json['facebook'],
       website: json['website'],
       twitter: json['twitter'],
-      liked: json['liked'] == 1,
+      liked: json['liked'] == 1, 
+      Desc: json['Desc'],
     );
   }
 }

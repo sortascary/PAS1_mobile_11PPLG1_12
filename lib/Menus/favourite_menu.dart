@@ -50,7 +50,8 @@ class FavouriteMenu extends StatelessWidget {
                     website: task.website,
                     twitter: task.twitter,
                     liked: (task.liked == 1).obs, 
-                    num: task.num, // Ensure this is correct
+                    num: task.num, 
+                    Desc: task.Desc, // Ensure this is correct
                   );
                 },
               );
