@@ -4,6 +4,7 @@ import 'package:get/get.dart';
 import 'package:pas1_mobile_11pplg1_12/Controllers/task_controller.dart';
 import 'package:pas1_mobile_11pplg1_12/Controllers/teamData_controller.dart';
 import 'package:pas1_mobile_11pplg1_12/Models/favorite_model.dart';
+import 'package:pas1_mobile_11pplg1_12/Widget/mycolors.dart';
 import 'package:url_launcher/url_launcher.dart';
 
 class MyCard extends StatelessWidget {
@@ -34,7 +35,7 @@ class MyCard extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Card(
-      color: Color.fromARGB(255, 197, 204, 139),
+      color: coloritem,
       shape: RoundedRectangleBorder(
         borderRadius: BorderRadius.circular(15.0),
       ),
@@ -47,7 +48,7 @@ class MyCard extends StatelessWidget {
               borderRadius: BorderRadius.circular(8.0),
               child: Image.network(
                 image,
-                height: 75,
+                height: 95,
               ),
             ),
             Column(

@@ -36,7 +36,7 @@ class TeamdataController extends GetxController {
       return TeamModel(
         id: league['idLeague'] != null ? int.tryParse(league['idLeague']) : null,
         image: league['strBadge'] ?? '',
-        teamName: league['strLeague'] ?? '',
+        teamName: league['strTeam'] ?? '',
         facebook: league['strFacebook'] ?? '',
         website: league['strWebsite'] ?? '',
         twitter: league['strTwitter'] ?? '',

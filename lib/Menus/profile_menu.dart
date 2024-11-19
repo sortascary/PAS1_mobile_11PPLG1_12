@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:pas1_mobile_11pplg1_12/Controllers/login_controller.dart';
+import 'package:pas1_mobile_11pplg1_12/Widget/mycolors.dart';
 
 class ProfileMenu extends StatelessWidget {
   ProfileMenu({super.key});
@@ -12,11 +13,13 @@ class ProfileMenu extends StatelessWidget {
         appBar: AppBar(
           title: Text(
             'Profile',
-            style: TextStyle(fontWeight: FontWeight.bold),
+            style: TextStyle(
+              fontWeight: FontWeight.bold,
+              color: colortextW),
           ),
           automaticallyImplyLeading: false,
           centerTitle: true,
-          backgroundColor: Color(0xff2596be),
+          backgroundColor: colorheader,
           actions: [
             IconButton(
                 onPressed: () {
@@ -32,20 +35,23 @@ class ProfileMenu extends StatelessWidget {
               width: double.infinity,
               decoration: BoxDecoration(
                 borderRadius: BorderRadius.only(bottomLeft: Radius.circular(55.0)),
-                color: Color(0xff2596be)
+                color: colorheader
               ),
               child: Column(
                 children: [
                   Icon(
                     Icons.account_circle_sharp,
                     size: 150, // Size of the icon
-                    color: Colors.black, // Icon color
+                    color: colortextW, // Icon color
                   ),
                   SizedBox(height: 20),
                   Text(
                     loginController.username.value,
                     textAlign: TextAlign.center,
-                    style: TextStyle(fontSize: 24, fontWeight: FontWeight.bold),
+                    style: TextStyle(
+                      fontSize: 24, 
+                      fontWeight: FontWeight.bold,
+                      color: colortextW),
                   ),
                   SizedBox(height: 20),
                 ],
@@ -54,6 +60,7 @@ class ProfileMenu extends StatelessWidget {
             Expanded(
               child: ListView(
                 children: [
+                  SizedBox(height: 20),
                   ListTile(
                     leading: Icon(Icons.account_circle_sharp),
                     title: Text('Account settings'),
