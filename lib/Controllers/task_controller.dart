@@ -31,6 +31,7 @@ class TaskController extends GetxController {
         num INTEGER,
         title TEXT, 
         image TEXT, 
+        Desc TEXT, 
         website TEXT, 
         facebook TEXT, 
         twitter TEXT, 

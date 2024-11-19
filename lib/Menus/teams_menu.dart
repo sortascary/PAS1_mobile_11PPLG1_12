@@ -44,7 +44,8 @@ class TeamsMenu extends StatelessWidget {
               website: league.website,
               twitter: league.twitter,
               liked: controller.liked[index],
-              num: index,
+              num: index, 
+              Desc: league.Desc,
             );
           },
         );

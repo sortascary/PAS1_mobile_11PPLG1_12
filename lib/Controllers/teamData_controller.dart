@@ -41,6 +41,7 @@ class TeamdataController extends GetxController {
         website: league['strWebsite'] ?? '',
         twitter: league['strTwitter'] ?? '',
         liked: prefs.getBool('liked_${league['idLeague']}') ?? false,
+        Desc: league['strDescriptionEN']?? '',
       );
     }).toList();
 

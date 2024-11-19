@@ -4,6 +4,7 @@ import 'package:get/get.dart';
 import 'package:pas1_mobile_11pplg1_12/Controllers/task_controller.dart';
 import 'package:pas1_mobile_11pplg1_12/Controllers/teamData_controller.dart';
 import 'package:pas1_mobile_11pplg1_12/Models/favorite_model.dart';
+import 'package:pas1_mobile_11pplg1_12/Pages/detail_page.dart';
 import 'package:pas1_mobile_11pplg1_12/Widget/mycolors.dart';
 import 'package:url_launcher/url_launcher.dart';
 
@@ -14,6 +15,7 @@ class MyCard extends StatelessWidget {
   final int num;
   final String teamname;
   final String image;
+  final String Desc;
   final String facebook;
   final String website;
   final String twitter;
@@ -29,7 +31,7 @@ class MyCard extends StatelessWidget {
     required this.website,
     required this.twitter,
     required this.liked, 
-    required this.num,
+    required this.num, required this.Desc,
   });
 
   @override
@@ -44,11 +46,16 @@ class MyCard extends StatelessWidget {
         child: Column(
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children: <Widget>[
-            ClipRRect(
-              borderRadius: BorderRadius.circular(8.0),
-              child: Image.network(
-                image,
-                height: 95,
+            GestureDetector(
+              onTap: () {
+                Get.to(DetailPage(image: image, Desc: Desc, name: teamname,));
+              },
+              child: ClipRRect(
+                borderRadius: BorderRadius.circular(8.0),
+                child: Image.network(
+                  image,
+                  height: 95,
+                ),
               ),
             ),
             Column(
@@ -113,7 +120,8 @@ class MyCard extends StatelessWidget {
                                   website: website, 
                                   facebook: facebook, 
                                   twitter: twitter, 
-                                  liked: liked.value? 0 : 1);
+                                  liked: liked.value? 0 : 1,
+                                   Desc: Desc);
                                   
                               taskController.addTask(task);
 
